@@ -158,6 +158,7 @@ header {
 /* Miranda */
 .miranda {
 	padding-inline: 2vw;
+	margin-bottom: 4vw;
 }
 
 h1 {
@@ -173,8 +174,12 @@ h1 {
 	display: flex;
 }
 
+.miranda img {
+	border: 1px solid #1d1d1d;
+}
+
 .left {
-	flex: 1;
+	flex: 3;
 	padding-right: 4vw;
 	border-inline-end: 1px solid #1d1d1d;
 }
@@ -183,16 +188,36 @@ h1 {
 	line-height: 0.8;
 	width: 100%;
 }
+
+.left h2 div {
+	position: relative;
+}
+
+.left h2 div::after {
+	content: '';
+	height: 1px;
+	width: 100%;
+	position: absolute;
+	bottom: 25%;
+	left: 0;
+	background-color: #1d1d1d;
+}
+
 .left h2 div:first-child {
-	font-size: 5vw;
+	font-size: 6vw;
 }
 .left h2 div:last-child {
 	text-align: center;
-	font-size: 8vw;
+	font-size: 10vw;
+}
+
+.left img {
+	margin-block-end: 3vw;
+	margin-block-start: 2vw;
 }
 
 .right {
-	flex: 3;
+	flex: 7;
 	margin-left: 4vw;
 }
 
@@ -200,15 +225,78 @@ h1 {
 	font-size: 2vw;
 }
 .dropcap::first-letter {
-	-webkit-initial-letter: 3;
-	initial-letter: 3;
-	font-size: 3vw;
+	/* -webkit-initial-letter: 3;
+	initial-letter: 3; */
+	float: left;
+	font-size: 7vw;
 	color: #cdc6be;
 	font-family: 'Canopee', sans-serif;
+	font-feature-settings: 'ss03';
+	margin: 0.75vw 1vw 1vw 0;
+	padding: 0.5vw;
+	background-color: #1d1d1d;
+}
+
+.right img {
+	margin-block-end: 3vw;
+}
+
+.right h2 {
+	position: relative;
+	line-height: 0.9;
+	font-size: 7vw;
+}
+
+.right h2::after {
+	content: '';
+	position: absolute;
+	height: 1px;
+	left: 0;
+	width: 100%;
+	bottom: 40%;
 	background-color: #1d1d1d;
 }
 
 @media (width <= 768px) {
+	.miranda .content {
+		flex-direction: column-reverse;
+	}
+	.miranda .right {
+		margin-block-end: 10vw;
+		margin-inline-start: 0;
+	}
+	.right h2 {
+		font-size: 11vw;
+	}
+	.right h2::after {
+		bottom: 10%;
+	}
+	.left {
+		padding-inline-end: 0;
+		border: none;
+	}
+	.left p {
+		font-size: 6vw;
+	}
+	.dropcap::first-letter {
+		font-size: 25vw;
+		margin: 0.75vw 2.5vw 2.5vw 0;
+		padding: 0.5vw;
+	}
+	.left h2 div:first-child {
+		font-size: 22vw;
+	}
+	.left h2 div:last-child {
+		text-align: center;
+		font-size: 38vw;
+	}
+
+	.left h2 div:first-child:after {
+		bottom: 20%;
+	}
+	.left h2 div:last-child:after {
+		bottom: 0%;
+	}
 	header {
 		display: none;
 	}
