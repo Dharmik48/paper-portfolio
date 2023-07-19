@@ -158,7 +158,6 @@ header {
 /* Miranda */
 .miranda {
 	padding-inline: 2vw;
-	margin-bottom: 4vw;
 }
 
 h1 {
@@ -257,7 +256,32 @@ h1 {
 	background-color: #1d1d1d;
 }
 
+/* WEBSITE */
+.website {
+	padding-inline: 2vw;
+	display: flex;
+	gap: 2vw;
+	margin-block: 4vw;
+	align-items: center;
+}
+
+.website h2 {
+	flex: 5;
+	text-align: center;
+	font-size: 28dvw;
+	letter-spacing: -0.05em;
+	color: #cdc6be;
+	background-color: #1d1d1d;
+}
+
+.website div {
+	flex: 1.5;
+}
+
 @media (width <= 768px) {
+	.website {
+		display: none;
+	}
 	.miranda .content {
 		flex-direction: column-reverse;
 	}
