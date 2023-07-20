@@ -374,7 +374,41 @@ h1 {
 	transition: translate 500ms ease;
 }
 
+/* AWARDS */
+.awards {
+	margin-inline: 2vw;
+	margin-block: 4vw;
+	padding-block: 4vw;
+	border-block: 1px solid #1d1d1d;
+	display: flex;
+	justify-content: space-between;
+}
+
+.award {
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+.award .title {
+	text-transform: uppercase;
+	font-size: 2vw;
+}
+
+.award h6 {
+	font-size: 5vw;
+}
+
+.times {
+	font-size: 10vw;
+	/* height: 100%; */
+}
+
 @media (width <= 768px) {
+	.awards {
+		display: none;
+	}
+
 	.upcoming {
 		margin-top: 4vw;
 		padding-top: 8vw;
