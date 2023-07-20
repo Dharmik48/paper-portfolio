@@ -477,6 +477,82 @@ h1 {
 	background-color: #1d1d1d;
 }
 
+/* TESTIMONIALS */
+.testimonials {
+	margin: 4vw 2vw;
+	display: flex;
+}
+
+.testimony {
+	cursor: pointer;
+	display: inline-block;
+	flex-basis: 40vw;
+	flex-grow: 0;
+	flex-shrink: 0;
+	height: 25vw;
+	border: 2px solid #1d1d1d;
+	border-radius: 1vw;
+	padding: 1vw;
+	background-color: #cdc6be;
+	transition: translate 600ms ease;
+	box-shadow: -4px 4px 6px rgba(29, 29, 27, 0.2);
+}
+
+.testimony > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 2vw;
+	height: 100%;
+	border-radius: 1vw;
+	border: 2px dashed #1d1d1d;
+	padding: 2vw;
+}
+
+.testimony:nth-child(2) {
+	translate: calc(-55% * 1) 0;
+}
+.testimony:nth-child(3) {
+	translate: calc(-55% * 2) 0;
+}
+.testimony:nth-child(4) {
+	translate: calc(-55% * 3) 0;
+}
+
+.testimony:hover ~ .testimony:nth-child(2) {
+	translate: -5% 0;
+}
+.testimony:hover ~ .testimony:nth-child(3) {
+	translate: -60% 0;
+}
+.testimony:hover ~ .testimony:nth-child(4) {
+	translate: -115% 0;
+}
+
+.testimony .text {
+	font-size: 2vw;
+}
+
+.from {
+	display: flex;
+	align-items: center;
+	gap: 1vw;
+}
+
+.from img {
+	border-radius: 50%;
+	border: 1px solid #1d1d1d;
+	width: 3vw;
+}
+
+.from h6 {
+	font-size: 2vw;
+}
+
+.from .caption {
+	font-size: 1.5vw;
+}
+
 @media (width <= 768px) {
 	.artisian > div:nth-child(1) {
 		flex-direction: column-reverse;
